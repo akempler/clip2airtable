@@ -5,6 +5,8 @@ Chrome extension to save a web page to the AI Lab Ideas table.
 This is just a quick example of creating a local extension for adding entries to airtable. 
 I use it, for example, to add articles to a newsletter content pipeline I keep in airtable.
 
+![Screenshot](/assets/screenshot.png)
+
 # Setup and Building
 
 Download the repo.
