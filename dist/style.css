@@ -1,7 +1,32 @@
+body {
+  background-color: rgb(185, 205, 221)
+}
+
 .clip2airtable.container {
-  width: 400px;
+  width: 480px;
+  background-color: aliceblue;
+  padding: 8px
 }
 
 .form-input {
-  width: 90%;
+  width: 98%;
+  margin-bottom: 16px;
+}
+
+.form-element.submit {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.btn {
+  background-color: rgb(40, 87, 150);
+  color: #fff;
+}
+
+label {
+  font-weight: bold;
+}
+
+legend {
+  margin-bottom: 12px;
 }

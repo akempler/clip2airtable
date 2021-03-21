@@ -6,13 +6,16 @@ const results = document.querySelector(".result-container");
 
 const apikey = process.env.APIKEY || 'apiKeyNotFound';
 const baseid = process.env.BASEID || 'baseIdNotFound';
+const tableid = process.env.TABLEID || 'tableIdNotFound';
+const viewid = process.env.VIEWID || 'viewIdNotFound';
 
 const url = `https://api.airtable.com/v0/${baseid}/Ideas`;
+const viewUrl = `https://airtable.com/${tableid}/${viewid}?blocks=hide`;
 
 results.style.display = "none";
 loading.style.display = "none";
 errors.textContent = "";
-// grab the form
+
 const form = document.querySelector(".form-data");
 const title = document.querySelector("#working-title");
 const idea = document.querySelector("#article-idea");
@@ -24,7 +27,6 @@ chrome.tabs.query({
   active: true,
   lastFocusedWindow: true
 }, function(tabs) {
-  // and use that tab to fill in out title and url
   const tab = tabs[0];
   currentUrl = tab.url;
   currentTitle = tab.title;
@@ -42,7 +44,7 @@ const saveToAirtable = async () => {
       "Referenced Article URL": currentUrl,
       "Referenced article title": currentTitle,
       "Channels": [
-        "Web"
+        "Newsletter"
       ]
     }
   }
@@ -55,10 +57,9 @@ const saveToAirtable = async () => {
       "Authorization": `Bearer ${apikey}`
     }
   }).then(function(response) {
-    //console.log(response);  
     loading.style.display = "none";
     results.style.display = "block";
-    results.innerHTML = '<p>Web page saved!<p>';
+    results.innerHTML = `<p>Web page saved!</p><p><a href="${viewUrl}" target="_blank">View in Airtable</a></p>`;
   }).catch(function(error) {
     console.log(error);
     throw new Error(`API ${error}`);
@@ -66,7 +67,6 @@ const saveToAirtable = async () => {
 
 };
 
-// handle form submission
 const handleSubmit = async e => {
   e.preventDefault();
   saveToAirtable();

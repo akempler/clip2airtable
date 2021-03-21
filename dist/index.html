@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h2 class="header">Clip to AirTable</h2>
+    <h2 class="header">Clip to AirTable - AI Newsletter</h2>
     <div class="clip2airtable container">
     <form class="form-data" autocomplete="on">
 
-      <div class="form-element">
-        <label for="working-title">Enter a working title:</label>
-        <input class="form-input" type="text" id="working-title" name="working-title" />
-      </div>
+      <fieldset>
+        <legend>Create an entry in the Ideas section of the AI Content Pipeline</legend>
+      
+        <div class="form-element">
+          <label for="working-title">Enter a working title:</label>
+          <input class="form-input" type="text" id="working-title" name="working-title" />
+        </div>
 
-      <div class="form-element">
-        <label for="article-idea">An idea for the article:</label>
-        <textarea class="form-input" name="article-idea" id="article-idea" rows="5"></textarea>
-      </div>
+        <div class="form-element">
+          <label for="article-idea">An idea for the article:</label>
+          <textarea class="form-input" name="article-idea" id="article-idea" rows="5"></textarea>
+        </div>
+      </fieldset>
 
-      <div class="form-element">
+      <div class="form-element submit">
         <button class="btn">Save</button>
       </div>
     </form>
