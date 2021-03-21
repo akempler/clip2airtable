@@ -1,0 +1,16 @@
+# Local & project files
+# -----------------------
+*~
+*.swp
+.DS_Store
+.DS_Store/
+.project/
+.vscode/
+.idea/
+
+.env
+
+# Exclude packages
+# -----------------------
+vendor/
+node_modules/

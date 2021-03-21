@@ -1,0 +1,22 @@
+{
+  "name": "clip2airtable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "webpack": "^5.27.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^7.0.2"
+  }
+}

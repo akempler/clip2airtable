@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Clip2Airtable",
+  "version": "1.0.0",
+  "description": "Lets you save a web page to an airtable table.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.airtable.com/",
+    "*://*/*"
+  ],
+  "icons":{
+    "16": "./icons/16ai.png",
+    "64": "./icons/64ai.png",
+    "128": "./icons/128ai.png"
+  }
+}

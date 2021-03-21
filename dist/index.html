@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clip2Airtable</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h2 class="header">Clip to AirTable</h2>
+    <div class="clip2airtable container">
+    <form class="form-data" autocomplete="on">
+
+      <div class="form-element">
+        <label for="working-title">Enter a working title:</label>
+        <input class="form-input" type="text" id="working-title" name="working-title" />
+      </div>
+
+      <div class="form-element">
+        <label for="article-idea">An idea for the article:</label>
+        <textarea class="form-input" name="article-idea" id="article-idea" rows="5"></textarea>
+      </div>
+
+      <div class="form-element">
+        <button class="btn">Save</button>
+      </div>
+    </form>
+    <div class="result">
+      <div class="loading">saving...</div>
+      <div class="errors"></div>
+      <div class="result-container"></div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="main.js" defer></script>
+</body>
+</html>
